@@ -1,16 +1,18 @@
-# pizza_app
+# Pizza Delivery App 🍕
 
-A new Flutter project.
+Aplicación móvil de delivery desarrollada con **Flutter** y **Dart**. Este proyecto implementa una arquitectura robusta para la gestión de pedidos, destacando el manejo de estados complejos y la integración con servicios de backend.
 
-## Getting Started
+## 🚀 Características Técnicas
+* **Arquitectura BLoC:** Gestión de estados profesional para una UI reactiva y desacoplada.
+* **Patrón Repository:** Implementación de `pizza_repository` y `user_repository` para el manejo de datos.
+* **Firebase Auth:** Autenticación segura de usuarios.
+* **UI/UX Moderna:** Catálogo dinámico con navegación fluida y diseño responsivo.
 
-This project is a starting point for a Flutter application.
+## 🛠️ Stack Tecnológico
+* **Framework:** Flutter
+* **Lenguaje:** Dart
+* **State Management:** flutter_bloc
+* **Backend:** Firebase
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+Desarrollado por **Tormenta Digital** | Optimizado para dispositivos móviles.
