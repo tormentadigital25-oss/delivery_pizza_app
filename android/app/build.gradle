@@ -1,0 +1,55 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // El plugin de Flutter debe ir después de Android y Kotlin
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.pizza_app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        // Actualizado a Java 17 para compatibilidad total con Firebase moderno
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        // Debe coincidir con la versión de Java anterior
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
+        // Confirmado: coincide con tu consola de Firebase
+        applicationId = "com.example.pizza_app"
+        
+        // Mantenemos 21, pero activamos multiDex para evitar la pantalla negra
+        minSdk = 21 
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+
+        // ESTA LÍNEA ES VITAL: Permite que la app cargue todas las librerías de Firebase
+        multiDexEnabled true 
+    }
+
+    buildTypes {
+        release {
+            // Usando llaves de debug por ahora para que `flutter run --release` funcione
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+}
