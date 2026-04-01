@@ -1,5 +1,7 @@
 # Pizza Delivery App 🍕
 
+![Vista previa de la App](Smarthphone_Pizza.png)
+
 Aplicación móvil de delivery desarrollada con **Flutter** y **Dart**. Este proyecto implementa una arquitectura robusta para la gestión de pedidos, destacando el manejo de estados complejos y la integración con servicios de backend.
 
 ## 🚀 Características Técnicas
